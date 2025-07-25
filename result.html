@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutsche Bank</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Deutsche Bank</h1>
+        <h2 class="text-center">Investment Suggestions</h2>
+        <div class="card">
+            <div class="card-body">
+                <pre class="mb-0">{{ result }}</pre>
+            </div>
+        </div>
+        <a href="/" class="btn btn-secondary btn-block mt-3">Go Back</a>
+    </div>
+    <footer>
+        Created by Your Name
+    </footer>
+</body>
+</html>

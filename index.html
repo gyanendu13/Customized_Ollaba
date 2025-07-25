@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutsache Finance Bot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Deutsache Finance Bot</h1>
+        <p class="text-center">Enter your financial details to get personalized investment suggestions.</p>
+        <form method="POST" action="/">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="income">Annual Income in USD</label>
+                    <input type="number" class="form-control" id="income" name="income" min="10000" step="500" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" id="age" name="age" min="0" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="marital_status">Marital Status</label>
+                <select class="form-control" id="marital_status" name="marital_status">
+                    <option>Single</option>
+                    <option>Married</option>
+                    <option>Divorced</option>
+                    <option>Widowed</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fixed_expenses">Fixed Monthly Expenses in USD</label>
+                <input type="number" class="form-control" id="fixed_expenses" name="fixed_expenses" min="500" step="100" required>
+            </div>
+            <div class="form-group">
+                <label for="risk_appetite">Risk Appetite (1: Low Risk, 10: High Risk)</label>
+                <input type="range" class="form-control-range" id="risk_appetite" name="risk_appetite" min="1" max="10">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Get Investment Suggestions</button>
+        </form>
+    </div>
+    <footer>
+        Created by Your Name
+    </footer>
+</body>
+</html>
